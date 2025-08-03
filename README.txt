@@ -15,8 +15,8 @@ The game revolves around a 2-bit main counter which can be incremented or decrem
 - When the counter reaches **0 (all zeros)**, the `LOSER` signal pulses high for exactly one clock cycle, and the loser count increments.
 - When the counter reaches **3 (all ones)**, the `WINNER` signal pulses high for exactly one clock cycle, and the winner count increments.
 - Once either the loser or winner count reaches 15 (`4'b1111`), the game declares a `GAMEOVER`, and the `WHO` signal indicates the winner:
-  - `10` means the winner has won
-  - `01` means the loser has lost
+  - `10` means the winner has reached 15
+  - `01` means the loser has reached 15
 - Upon game over, all counters and signals reset automatically to start a new game.
 
 This simple design simulates a competitive counter game where players can influence the counter increments or decrements, and the system tracks the winner and loser status in a synchronized manner.
